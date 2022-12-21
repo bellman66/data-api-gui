@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title> Data Request GUI </title>
+  </head>
+
+  <body>
+    <h1> Data Request GUI 1</h1>
+    <p>👋</p>
+
+    <div>
+      <span id="file_title"> Please Input File </span>
+      <input type="file" id="file" accept=".xlxs, .xls" multiple/>
+    </div>
+
+    <input type="button" id="test_btn"/>
+  </body>
+
+  <!-- Script -->
+  <script src="./renderer.js"></script>
+</html>
