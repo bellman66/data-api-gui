@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish"
+    "publish": "electron-forge publish",
+    "deploy": "electron-packager appdirectory appName --platform=win32 --arch=x64 --electron-version=1.4.3"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +18,9 @@
   },
   "dependencies": {
     "axios": "^1.2.1",
+    "electron-dl": "^3.5.0",
     "electron-log": "^4.4.8",
+    "electron-packager": "^17.1.1",
     "xlsx": "^0.18.5"
   }
 }

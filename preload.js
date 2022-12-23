@@ -9,4 +9,6 @@ contextBridge.exposeInMainWorld('versions', {
 
 contextBridge.exposeInMainWorld('electronAPI',{
   requestDataFile: (filePath) => ipcRenderer.send('request-data-file', filePath)
+  , handleProcessCnt: (curr, total) => ipcRenderer.on('update-counter', curr, total)
+  , handleEndProcess: (downloadLink) => ipcRenderer.on('end-process', downloadLink)
 })

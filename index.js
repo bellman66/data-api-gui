@@ -4,6 +4,8 @@ const url = require("url");
 const xlsx = require("xlsx");
 const axios = require("axios");
 
+var win;
+
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 1000,
@@ -14,11 +16,8 @@ const createWindow = () => {
     },
   });
 
-  win.webContents.on('did-finish-load', (event) => {
-    win.webContents.send('onWebcontentsValue', 'OK')
-  })
-
   win.loadFile("./pages/index.html");
+  return win;
 };
 
 // b_stt , tax_type , end_dt
@@ -62,58 +61,62 @@ const callDataPortal = async (dataList) => {
   }
 }
 
-const handleDataFile = async (event, filePath) => {
+
+const collectDataList = async (jsonsheet, defaultStep) => {
+  let result = []
+  const range = jsonsheet.length
+  const cnt = Math.floor(range / defaultStep);
+
+  for (let i = 0; i <= cnt; i++) {
+    const start = i * defaultStep;
+    const end = start + 99 > range ? range - 1 : start + 99;
+
+    // Insert ID List
+    let targetList = [];
+    for (let k = start; k <= end; k++) {
+      targetList.push(String(jsonsheet[k]['id']));
+    }
+
+    let response = await callDataPortal(targetList);
+
+    // Match Data
+    chunkdata = transResponse(response["data"]);
+    result.push(...chunkdata);
+
+    handleProcessCnt(i, cnt);
+  }
+
+  return result
+}
+
+const createNewXlsxFile = (aDataList) => {
+  let makeBook = xlsx.utils.book_new();
+  let makesheet = xlsx.utils.json_to_sheet(aDataList);
+  xlsx.utils.book_append_sheet(makeBook, makesheet, "result");
+  xlsx.writeFile(makeBook, 'out.xlsx');
+}
+
+const handleProcessCnt = (curr, total) => win.webContents.send('update-counter', curr, total)
+const handleEndProcess = (downloadLink) => win.webContents.send('end-process', downloadLink)
+
+const handleDataFile = (event, filePath) => {
   const workbook = xlsx.readFile(filePath, { type: 'binary' });
 
-  workbook.SheetNames.forEach((name) => {
+  workbook.SheetNames.forEach(async (name) => {
     const jsonsheet = xlsx.utils.sheet_to_json(workbook.Sheets[name])
     const range = jsonsheet.length
     const defaultStep = 100;
     const cnt = Math.floor(range / defaultStep);
 
-    let datalist = []
-    for(let i=0; i<=cnt; i++) {
-        const start = i * defaultStep
-        const end = start+99 > range ? range-1 : start+99;
-
-        // Insert ID List
-        let targetList = []
-        for (let k=start; k<=end; k++) {
-         
-          targetList.push(String(jsonsheet[k]['id']))
-        }
-
-        (async () => {
-          let response = await callDataPortal(targetList)
-
-          // Match Data
-          chunkdata= transResponse(response["data"])
-          datalist.push(...chunkdata)
-
-          console.log(datalist)
-        })();
-
-        // callDataPortal(targetList)
-        //               .then((res) => {
-        //                 data = res.data;
-        //                 dataList = data["data"]
-        //                 return transResponse(dataList)
-        //               })
-        //               .then((data) => {
-        //                 let result = {}
-        //                 for (let k=start; k<=end; k++) {
-        //                   const val = data[cnt++];
-
-        //                   result[k]["b_no"] = val["b_no"];
-        //                   result[k]["tax_type"] = val["tax_type"];
-        //                   result[k]["end_dt"] = val["end_dt"];
-        //                 }
-        //                 return result
-        //               })
-        //               .then((sheet) => {
-        //                 console.log("\n update \n")
-        //                 console.log(sheet)
-        //               })
+    // Call Data 
+    let datalist = await collectDataList(jsonsheet, defaultStep);
+    
+    try {
+      createNewXlsxFile(datalist);
+      handleEndProcess(path.join(__dirname, 'out.xlsx'));
+    }
+    catch (err) {
+      console.log(err)
     }
   })
 }
@@ -123,11 +126,11 @@ app.whenReady().then(() => {
   ipcMain.on('request-data-file', handleDataFile)
 
   // Create View 
-  createWindow();
+  win = createWindow();
 
   app.on("activate", () => {
     if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow();
+      win = createWindow();
     }
   });
 });
