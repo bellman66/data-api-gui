@@ -89,15 +89,15 @@ const collectDataList = async (jsonsheet, defaultStep) => {
   return result
 }
 
-const createNewXlsxFile = (aDataList) => {
+const createNewXlsxFile = (aDataList, aDirPath) => {
   let makeBook = xlsx.utils.book_new();
   let makesheet = xlsx.utils.json_to_sheet(aDataList);
   xlsx.utils.book_append_sheet(makeBook, makesheet, "result");
-  xlsx.writeFile(makeBook, 'out.xlsx');
+  xlsx.writeFile(makeBook, path.join(aDirPath, 'out.xlsx'));
 }
 
 const handleProcessCnt = (curr, total) => win.webContents.send('update-counter', curr, total)
-const handleEndProcess = (downloadLink) => win.webContents.send('end-process', downloadLink)
+const handleEndProcess = () => win.webContents.send('end-process')
 
 const handleDataFile = (event, filePath) => {
   const workbook = xlsx.readFile(filePath, { type: 'binary' });
@@ -112,8 +112,9 @@ const handleDataFile = (event, filePath) => {
     let datalist = await collectDataList(jsonsheet, defaultStep);
     
     try {
-      createNewXlsxFile(datalist);
-      handleEndProcess(path.join(__dirname, 'out.xlsx'));
+      const dirPath = path.parse(filePath).dir
+      createNewXlsxFile(datalist, dirPath);
+      handleEndProcess();
     }
     catch (err) {
       console.log(err)
