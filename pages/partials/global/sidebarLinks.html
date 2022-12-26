@@ -1,0 +1,158 @@
+<div class="dark:border-tuna border-l">
+  <div>
+    <a
+      href="./index.html"
+      class="hover:bg-icy border-periblue dark:bg-tuna text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light bg-white border-l-2"
+    >
+      Quickstart
+    </a>
+    <div x-data="{ open: false }">
+      <button
+        class="dark:hover:bg-tuna hover:bg-white focus:border-periblue inline-flex items-center w-full pr-4 border-l-2 border-transparent"
+        @click="open = ! open"
+      >
+        <span class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group inline-flex items-center p-2 pl-6 text-base font-light">
+          Designing
+        </span>
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          :class="{'rotate-180': open, 'rotate-0': !open}"
+          class="text-oyster dark:text-manatee dark:hover:text-periblue inline w-5 h-5 ml-auto transition-transform duration-200 transform"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <div class="dark:border-tuna -px-px p-2 pl-6 border-l" x-show="open" @click.outside="open = false">
+        <ul>
+          <li>
+            <a
+              href="./starter.html"
+              class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+            >
+              Get Started
+            </a>
+          </li>
+          <li>
+            <a
+              href="./design-kit.html"
+              class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+            >
+              Design Kits
+            </a>
+          </li>
+          <li>
+            <a
+              href="./design-resources.html"
+              class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+            >
+              Resources
+            </a>
+          </li>
+          <li>
+            <a
+              href="./tutorials.html"
+              class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+            >
+              Tutorials
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div x-data="{ open: false }">
+      <button
+        class="dark:hover:bg-tuna hover:bg-white focus:border-periblue inline-flex items-center w-full pr-4 border-l-2 border-transparent"
+        @click="open = ! open"
+      >
+        <span class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group inline-flex items-center p-2 pl-6 text-base font-light">
+          Developing
+        </span>
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          :class="{'rotate-180': open, 'rotate-0': !open}"
+          class="text-oyster dark:text-manatee dark:hover:text-periblue inline w-5 h-5 ml-auto transition-transform duration-200 transform"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <div class="dark:border-tuna -px-px p-2 pl-6 border-l" x-show="open" @click.outside="open = false">
+        <ul>
+          <li>
+            <a
+              href="./starter.html"
+              class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+            >
+              Get started
+            </a>
+          </li>
+          <li>
+            <a
+              href="./frameworks.html"
+              class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+            >
+              Frameworks
+            </a>
+          </li>
+          <li>
+            <a
+              href="./developer-resources.html"
+              class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+            >
+              Resources
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <a
+      href="./recomendations.html"
+      class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light"
+    >
+      Recommendations
+    </a>
+  </div>
+  <div class="pl-6 mt-12">
+    <p class="text-comet dark:text-manatee text-sm font-semibold uppercase">Development</p>
+  </div>
+  <div class="mt-3">
+    <a
+      href="./components.html"
+      class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light border-l border-transparent"
+    >
+      Components
+    </a>
+
+    <a
+      href="./style-guide.html"
+      class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light border-l border-transparent"
+    >
+      Style Guide
+    </a>
+    <a
+      href="#"
+      class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light border-l border-transparent"
+    >
+      License
+    </a>
+    <a
+      href="https://github.com/WickedLabs/dockerz"
+      class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light border-l border-transparent"
+    >
+      Github Hub Repo
+    </a>
+  </div>
+</div>

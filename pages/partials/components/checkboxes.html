@@ -1,0 +1,184 @@
+<main class="flex-auto" id="checkboxes">
+  <div class="max-w-7xl mx-auto">
+    <div class="dark:border-gun pb-6 border-b">
+      <h3 class="text-comet text-2xl font-normal leading-6">Checkboxes</h3>
+    </div>
+    <div class="flex-grow mt-6">
+      <div class="flex flex-wrap items-center gap-12">
+        <div>
+          <fieldset class="space-y-5">
+            <legend class="sr-only">Screen reader text</legend>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input
+                  id="input"
+                  aria-describedby="input-description"
+                  name="input"
+                  type="checkbox"
+                  class="text-oyster border-oyster focus:ring-oyster w-4 h-4 rounded"
+                />
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="input" class="text-comet dark:text-manatee">Unchecked</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="space-y-5">
+            <legend class="sr-only">Screen reader text</legend>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input
+                  checked=""
+                  id="input"
+                  aria-describedby="input-description"
+                  name="input"
+                  type="checkbox"
+                  class="text-oyster border-oyster focus:ring-oyster w-4 h-4 rounded"
+                />
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="input" class="text-comet dark:text-manatee">Checked</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="space-y-5">
+            <legend class="sr-only">Screen reader text</legend>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input
+                  disabled=""
+                  id="input"
+                  aria-describedby="input-description"
+                  name="input"
+                  type="checkbox"
+                  class="text-oyster border-oyster focus:ring-oyster disabled:opacity-60 w-4 h-4 rounded"
+                />
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="input" class="text-comet dark:text-manatee">Unchecked</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="space-y-5">
+            <legend class="sr-only">Screen reader text</legend>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input
+                  disabled=""
+                  checked=""
+                  id="input"
+                  aria-describedby="input-description"
+                  name="input"
+                  type="checkbox"
+                  class="text-oyster border-oyster focus:ring-oyster disabled:opacity-60 w-4 h-4 rounded"
+                />
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="input" class="text-comet dark:text-manatee">Checked</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div>
+          <fieldset class="space-y-5">
+            <legend class="sr-only">Screen reader text</legend>
+            <div class="flex items-center text-sm">
+              <input
+                type="radio"
+                name="pricing-plan"
+                value="Startup"
+                class="border-oyster text-oyster focus:ring-oyster w-4 h-4"
+                aria-labelledby="pricing-plans-0-label"
+                aria-describedby="pricing-plans-0-description-0 pricing-plans-0-description-1"
+              />
+
+              <span id="pricing-plans-0-label" class="text-comet dark:text-manatee ml-3">Checked</span>
+            </div>
+          </fieldset>
+          <fieldset class="space-y-5">
+            <legend class="sr-only">Screen reader text</legend>
+            <div class="flex items-center text-sm">
+              <input
+                checked=""
+                type="radio"
+                name="pricing-plan"
+                value="Startup"
+                class="border-oyster text-oyster focus:ring-oyster w-4 h-4"
+                aria-labelledby="pricing-plans-0-label"
+                aria-describedby="pricing-plans-0-description-0 pricing-plans-0-description-1"
+              />
+
+              <span id="pricing-plans-0-label" class="text-comet dark:text-manatee ml-3">Checked</span>
+            </div>
+          </fieldset>
+          <fieldset class="space-y-5">
+            <legend class="sr-only">Screen reader text</legend>
+            <div class="flex items-center text-sm">
+              <input
+                disabled=""
+                type="radio"
+                name="pricing-plan"
+                value="Startup"
+                class="border-oyster text-oyster focus:ring-oyster disabled:opacity-60 w-4 h-4"
+                aria-labelledby="pricing-plans-0-label"
+                aria-describedby="pricing-plans-0-description-0 pricing-plans-0-description-1"
+              />
+
+              <span id="pricing-plans-0-label" class="text-comet dark:text-manatee ml-3">Checked</span>
+            </div>
+          </fieldset>
+          <fieldset class="space-y-5">
+            <legend class="sr-only">Screen reader text</legend>
+            <div class="flex items-center text-sm">
+              <input
+                disabled=""
+                checked=""
+                type="radio"
+                name="pricing-plan"
+                value="Startup"
+                class="border-oyster text-oyster focus:ring-oyster disabled:opacity-60 w-4 h-4"
+                aria-labelledby="pricing-plans-0-label"
+                aria-describedby="pricing-plans-0-description-0 pricing-plans-0-description-1"
+              />
+
+              <span id="pricing-plans-0-label" class="text-comet dark:text-manatee ml-3">Checked</span>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<main class="flex-auto">
+  <div class="max-w-7xl mx-auto">
+    <div class="dark:border-gun pb-6 border-b">
+      <h3 class="text-comet dark:text-manatee text-2xl font-normal leading-6">Toggle</h3>
+    </div>
+    <div class="flex-grow mt-6">
+      <div>
+        <label for="unchecked" class="inline-flex items-center mt-3 cursor-pointer">
+          <span class="relative">
+            <span class="dark:bg-cinder block w-10 h-6 bg-white rounded-full shadow-inner"></span>
+            <span
+              class="focus-within:shadow-outline dark:bg-santa absolute inset-y-0 left-0 block w-4 h-4 mt-1 ml-1 transition-transform duration-300 ease-in-out bg-white rounded-full shadow"
+            >
+              <input id="unchecked" type="checkbox" class="absolute w-0 h-0 opacity-0" />
+            </span>
+          </span>
+          <span class="text-comet dark:text-manatee ml-3 text-sm">With label</span>
+        </label>
+      </div>
+
+      <label for="checked" class="inline-flex items-center mt-3 cursor-pointer">
+        <span class="relative">
+          <span class="dark:bg-cinder block w-10 h-6 bg-white rounded-full shadow-inner"></span>
+          <span
+            class="bg-oyster focus-within:shadow-outline absolute inset-y-0 left-0 block w-4 h-4 mt-1 ml-1 transition-transform duration-300 ease-in-out transform translate-x-full rounded-full shadow"
+          >
+            <input id="checked" type="checkbox" class="absolute w-0 h-0 opacity-0" />
+          </span>
+        </span>
+      </label>
+    </div>
+  </div>
+</main>

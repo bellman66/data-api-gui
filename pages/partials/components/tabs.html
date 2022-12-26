@@ -1,0 +1,83 @@
+<main class="flex-auto" id="tabs">
+  <div class="max-w-7xl mx-auto">
+    <div class="dark:border-gun pb-6 border-b">
+      <h3 class="text-comet text-2xl font-normal leading-6">Tabs</h3>
+    </div>
+    <div class="flex-grow max-w-2xl">
+      <div class="lg:grid lg:grid-cols-1 flex flex-col gap-12">
+        <div class="flex items-center justify-center h-full">
+          <div x-data="tabData()" @tab-change="handleTabChange($event)" class="flex flex-col flex-1">
+            <header class="py-12">
+              <div>
+                <div class="dark:border-gun border-b">
+                  <div class="mt-4" x-data="{ tab: 'bike' }">
+                    <div class="flex w-full">
+                      <button
+                        :class="{ 'active  border-b-2 text-club border-oyster dark:border-white ': tab === 'bike' }"
+                        class="text-comet focus:outline-none focus:bg-ghost hover:bg-alabaster hover:text-oyster focus:text-oyster dark:focus:bg-tuna dark:hover:bg-cinder dark:text-manatee p-3 border-b-2 border-transparent rounded-t-sm"
+                        @click="tab = 'bike'"
+                      >
+                        Bike
+                      </button>
+                      <button
+                        :class="{ 'active  border-b-2 text-club border-oyster dark:border-white': tab === 'car' }"
+                        class="text-comet focus:outline-none focus:bg-ghost hover:bg-alabaster hover:text-oyster focus:text-oyster dark:focus:bg-tuna dark:hover:bg-cinder dark:text-manatee p-3 border-b-2 border-transparent rounded-t-sm"
+                        @click="tab = 'car'"
+                      >
+                        Car
+                      </button>
+                    </div>
+
+                    <div class="text-club py-3 rounded-b-sm">
+                      <div x-show="tab === 'bike'">
+                        <div class="space-y-8">
+                          <div class="text-oyster flex items-center">
+                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidiven="true">
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                              />
+                            </svg>
+                          </div>
+
+                          <p class="text-comet lg:text-3xl dark:text-smoke text-4xl font-light leading-snug">Save Time</p>
+                        </div>
+                        <div class="text-waterloo dark:text-santa sm:text-lg md:mt-5 md:text-xl mt-2 text-base font-light">
+                          <span>
+                            Be any other - we are certain of that. Built from the ground up using the latest technologies, Shadow's platform is unlike any other
+                            - we are certain.
+                          </span>
+                        </div>
+                      </div>
+                      <div x-show="tab === 'car'">
+                        <div class="space-y-8">
+                          <div class="text-oyster flex items-center">
+                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidiven="true">
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                              />
+                            </svg>
+                          </div>
+
+                          <p class="text-comet lg:text-3xl dark:text-smoke text-4xl font-bold leading-snug">Built with</p>
+                        </div>
+                        <div class="text-waterloo dark:text-santa sm:text-lg md:mt-5 md:text-xl mt-2 text-base font-light">
+                          <span> Built from the ground up using the latest technologies, Shadow's platform is unlike any other - we are certain. </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

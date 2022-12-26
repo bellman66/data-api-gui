@@ -1,0 +1,127 @@
+<main class="flex-auto" id="accordeons">
+  <div class="max-w-7xl mx-auto">
+    <div class="dark:border-gun pb-6 border-b">
+      <h3 class="text-comet text-2xl font-normal leading-6">Accordeons</h3>
+    </div>
+    <div class="flex-grow max-w-3xl mt-6">
+      <div class="lg:grid lg:grid-cols-1 flex flex-col gap-12">
+        <div class="border-ghost dark:border-gun rounded-xl mx-auto overflow-hidden border-2" x-data="{selected:null}">
+          <ul class="">
+            <li class="group dark:border-gun relative border-b-2" @click="open = !open">
+              <button
+                type="button"
+                class="focus:outline-none focus:border-outline focus:bg-ghost dark:text-comet bg-ghost dark:bg-tuna focus:text-white w-full text-left"
+                @click="selected !== 1 ? selected = 1 : selected = null"
+              >
+                <div class="text-club flex items-center justify-between p-4 text-base">
+                  <span class="text-comet group-hover:text-oyster dark:text-manatee text-lg font-normal"> Do I need to know HTML and CSS? </span>
+                  <svg
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    :class="{'rotate-180': open, 'rotate-0': !open}"
+                    class="md:-mt-1 text-comet group-hover:text-oyster inline w-6 h-6 mt-1 ml-1 transition-transform duration-200 transform rotate-180"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="max-h-0 relative overflow-hidden transition-all duration-700"
+                style=""
+                x-ref="container1"
+                x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+              >
+                <div class="p-4">
+                  <p class="text-comet dark:text-manatee text-lg font-light">
+                    To make the template feel yours, you need to know the fundamentals of HTML and CSS. It is important to understand the differences between
+                    these two, the syntax of each language, and some common terminology to be able to edit the template. There are numerous resources on the
+                    internet that will assist you if you need help with HTML, CSS, Javascript/jQuery, etc. Nevertheless, there are some specific online sources
+                    that will provide plenty of assistances. Here is a small list: W3Schools Mozilla Developer Network (MDN) Web Docs Stack Overflow
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="dark:border-gun group relative border-b-2" @click="open = !open">
+              <button
+                type="button"
+                class="focus:outline-none focus:border-outline focus:bg-ghost dark:text-comet bg-ghost dark:bg-tuna focus:text-white w-full text-left"
+                @click="selected !== 2 ? selected = 2 : selected = null"
+              >
+                <div class="text-club flex items-center justify-between p-4 text-base">
+                  <span class="text-comet group-hover:text-oyster dark:text-manatee text-lg font-normal"> Can I install the template on a CMS? </span>
+                  <svg
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    :class="{'rotate-180': open, 'rotate-0': !open}"
+                    class="md:-mt-1 text-comet group-hover:text-oyster inline w-6 h-6 mt-1 ml-1 transition-transform duration-200 transform rotate-180"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="max-h-0 relative overflow-hidden transition-all duration-700"
+                style=""
+                x-ref="container2"
+                x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
+              >
+                <div class="p-4">
+                  <p class="text-comet dark:text-manatee text-lg font-light">
+                    The template cannot be installed on WordPress, Blogger, Joomla, Drupal, Ghost, or any other CMS. It is primarily designed for use on the web
+                    as a standard website.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="dark:border-gun group relative" @click="open = !open">
+              <button
+                type="button"
+                class="focus:outline-none focus:border-outline focus:bg-ghost dark:text-comet bg-ghost dark:bg-tuna focus:text-white w-full text-left"
+                @click="selected !== 3 ? selected = 3 : selected = null"
+              >
+                <div class="text-club flex items-center justify-between p-4 text-base">
+                  <span class="text-comet group-hover:text-oyster dark:text-manatee text-lg font-normal"> Will I receive future updates? </span>
+                  <svg
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    :class="{'rotate-180': open, 'rotate-0': !open}"
+                    class="md:-mt-1 text-comet group-hover:text-oyster inline w-6 h-6 mt-1 ml-1 transition-transform duration-200 transform rotate-180"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="max-h-0 relative overflow-hidden transition-all duration-700"
+                style=""
+                x-ref="container3"
+                x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
+              >
+                <div class="p-4">
+                  <p class="text-comet dark:text-manatee text-lg font-light">
+                    We provide maintenance for our templates through updates when necessary. While we attempt to fix the for serious issues, there may be cases
+                    where it is impractical or impossible to generate a fix due to compatibility issues or the potential for introduction of unwanted side
+                    effects. Any updates will be delivered to you for download via Gumroad. You are solely responsible for downloading, copying, and installing
+                    the updates. Please note that we do not guarantee any updates for our free templates.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

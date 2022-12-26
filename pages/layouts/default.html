@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-full bg-white dark:bg-tuna" style="scroll-behavior: smooth" id="main">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Primary Meta Tags -->
+    <!--
+		       <title>Meta Tags — Preview, Edit and Generate</title>
+		      <meta name="title" content="Meta Tags — Preview, Edit and Generate">
+		<meta name="description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!">
+		-->
+    <!-- Open Graph / Facebook -->
+    <!--
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="#">
+		<meta property="og:title" content="Text">
+		<meta property="og:description" content="Text">
+		<meta property="og:image" content="#">
+		-->
+    <!-- Twitter -->
+    <!--
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="#">
+		<meta property="twitter:title" content="Text">
+		<meta property="twitter:description" content="Text">
+		<meta property="twitter:image" content="#">
+		-->
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <title>wickedtemplates.com || Tailwind CSS Landing Pages for your next project</title>
+  </head>
+
+  <body class="h-full mx-auto bg-white 2xl:max-w-7xl dark:bg-tuna" id="top">
+    <div class="z-50">
+      <a
+        href="#top"
+        aria-label="Back to top"
+        class="fixed bottom-0 right-0 p-2 mx-5 my-5 text-white rounded-full bg-oyster hover:bg-gray-700 focus:outline-none"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path fill="none" d="M0 0h24v24H0z" />
+          <path
+            d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 18c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8zm1-8v4h-2v-4H8l4-4 4 4h-3z"
+            fill="rgba(255,255,255,1)"
+          />
+        </svg>
+      </a>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+    <script>
+      var sideBar = document.getElementById('mobile-nav');
+      var openSidebar = document.getElementById('openSideBar');
+      var closeSidebar = document.getElementById('closeSideBar');
+
+      function sidebarHandler(flag) {
+        if (flag) {
+          sideBar.style.transform = 'translateX(0px)';
+          openSidebar.classList.add('hidden');
+          closeSidebar.classList.remove('hidden');
+        } else {
+          sideBar.style.transform = 'translateX(-260px)';
+          closeSidebar.classList.add('hidden');
+          openSidebar.classList.remove('hidden');
+        }
+      }
+    </script>
+    <script>
+      let dark = localStorage.getItem('dark');
+
+      function enabledark() {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark', 'enabled');
+      }
+
+      function disabledark() {
+        document.body.classList.remove('dark');
+        localStorage.setItem('dark', null);
+      }
+
+      if (dark === 'enabled') {
+        enabledark();
+      }
+
+      // Listeners
+
+      const darkToggle = document.querySelector('#dark-mode-toggle');
+      darkToggle.addEventListener('click', () => {
+        dark = localStorage.getItem('dark');
+        dark !== 'enabled' ? enabledark() : disabledark();
+      });
+
+      function tabData() {
+        return {};
+      }
+    </script>
+  </body>
+</html>

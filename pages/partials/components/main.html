@@ -1,0 +1,2096 @@
+<div class="min-h-[640px] bg-white dark:bg-tuna">
+  <div x-data="{ open: false }" @keydown.window.escape="open = false">
+    <!-- Static sidebar for desktop -->
+    <div class="z-50 hidden bg-alabaster lg:flex md:w-72 md:flex-col md:fixed md:inset-y-0 dark:bg-cinder">
+      <!-- Sidebar component, swap this element with another sidebar if you like -->
+      <div class="flex flex-col flex-1 min-h-0 border-r border-smoke dark:border-gun">
+        <div class="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto lg:pl-6">
+          <div class="flex items-center flex-shrink-0 px-4 text-comet dark:text-white">
+            <a href="./index.html"
+              ><span class="inline-flex items-center font-bold tracking-tighter">
+                <svg class="w-8 h-8" viewBox="0 0 147 148" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+                  <title>Group</title>
+                  <desc>Created with Sketch.</desc>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Group">
+                      <path
+                        d="M73,74 L147,74 L147,148 L93,148 C81.954305,148 73,139.045695 73,128 L73,74 Z"
+                        fill="#d5ddfe"
+                        transform="translate(110.000000, 111.000000) rotate(-90.000000) translate(-110.000000, -111.000000) "
+                      />
+
+                      <path
+                        d="M0,0 L74,0 L74,74 L20,74 C8.954305,74 1.3527075e-15,65.045695 0,54 L0,0 Z"
+                        fill="#445cff"
+                        transform="translate(37.000000, 37.000000) scale(-1, -1) rotate(-90.000000) translate(-37.000000, -37.000000) "
+                      />
+                    </g>
+                  </g>
+                </svg>
+
+                <span class="ml-4 lg:text-2xl">Dockerz</span>
+              </span></a
+            >
+          </div>
+          <nav class="flex-1 mt-12">
+            <div class="dark:border-tuna border-l">
+              <div>
+                <a
+                  href="./index.html"
+                  class="hover:bg-icy border-periblue dark:bg-tuna text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light bg-white border-l-2"
+                >
+                  Quickstart
+                </a>
+                <div x-data="{ open: false }">
+                  <button
+                    class="dark:hover:bg-tuna hover:bg-white focus:border-periblue inline-flex items-center w-full pr-4 border-l-2 border-transparent"
+                    @click="open = ! open"
+                  >
+                    <span
+                      class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group inline-flex items-center p-2 pl-6 text-base font-light"
+                    >
+                      Designing
+                    </span>
+                    <svg
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      :class="{'rotate-180': open, 'rotate-0': !open}"
+                      class="text-oyster dark:text-manatee dark:hover:text-periblue inline w-5 h-5 ml-auto transition-transform duration-200 transform"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+
+                  <div class="dark:border-tuna -px-px p-2 pl-6 border-l" x-show="open" @click.outside="open = false">
+                    <ul>
+                      <li>
+                        <a
+                          href="./starter.html"
+                          class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+                        >
+                          Get Started
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="./design-kit.html"
+                          class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+                        >
+                          Design Kits
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="./design-resources.html"
+                          class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+                        >
+                          Resources
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="./tutorials.html"
+                          class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+                        >
+                          Tutorials
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div x-data="{ open: false }">
+                  <button
+                    class="dark:hover:bg-tuna hover:bg-white focus:border-periblue inline-flex items-center w-full pr-4 border-l-2 border-transparent"
+                    @click="open = ! open"
+                  >
+                    <span
+                      class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group inline-flex items-center p-2 pl-6 text-base font-light"
+                    >
+                      Developing
+                    </span>
+                    <svg
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      :class="{'rotate-180': open, 'rotate-0': !open}"
+                      class="text-oyster dark:text-manatee dark:hover:text-periblue inline w-5 h-5 ml-auto transition-transform duration-200 transform"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+
+                  <div class="dark:border-tuna -px-px p-2 pl-6 border-l" x-show="open" @click.outside="open = false">
+                    <ul>
+                      <li>
+                        <a
+                          href="./starter.html"
+                          class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+                        >
+                          Get started
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="./frameworks.html"
+                          class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+                        >
+                          Frameworks
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="./developer-resources.html"
+                          class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+                        >
+                          Resources
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <a
+                  href="./recomendations.html"
+                  class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light"
+                >
+                  Recommendations
+                </a>
+              </div>
+              <div class="pl-6 mt-12">
+                <p class="text-comet dark:text-manatee text-sm font-semibold uppercase">Development</p>
+              </div>
+              <div class="mt-3">
+                <a
+                  href="./components.html"
+                  class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light border-l border-transparent"
+                >
+                  Components
+                </a>
+
+                <a
+                  href="./style-guide.html"
+                  class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light border-l border-transparent"
+                >
+                  Style Guide
+                </a>
+                <a
+                  href="#"
+                  class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light border-l border-transparent"
+                >
+                  License
+                </a>
+                <a
+                  href="https://github.com/WickedLabs/dockerz"
+                  class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light border-l border-transparent"
+                >
+                  Github Hub Repo
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!------ CTA buttons goes here
+          <div
+          class="flex flex-shrink-0 p-4 border-t lg:p-12 border-smoke dark:border-gun"
+          >
+        </div>
+      --></div>
+    </div>
+    <div class="relative z-0 flex flex-1 overflow-hidden">
+      <div class="focus:outline-none lg:pl-72 relative z-0 flex-1 overflow-y-auto">
+        <nav class="mx-auto bg-white border-b dark:bg-gun dark:border-gun border-smoke">
+          <div class="px-2 mx-auto max-w-7xl sm:px-4 lg:px-8">
+            <div class="flex justify-between h-16">
+              <div class="flex items-center justify-center flex-1 px-2 space-x-8 lg:ml-6 lg:justify-end">
+                <div class="w-full max-w-lg lg:max-w-xs">
+                  <label for="search" class="sr-only">Search</label>
+                  <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                      <!-- Heroicon name: solid/search -->
+                      <svg class="w-5 h-5 text-metal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <input
+                      id="search"
+                      name="search"
+                      class="block w-full py-2 pl-10 pr-3 leading-5 bg-white border rounded-md text-mana border-smoke dark:bg-tuna placeholder-santa focus:outline-none focus:placeholder-oyster focus:ring-1 focus:ring-oyster focus:border-oyster sm:text-sm dark:border-river"
+                      placeholder="Search"
+                      type="search"
+                    />
+                  </div>
+                </div>
+                <button id="dark-mode-toggle" class="text-pearl dark:text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z" fill="currentColor" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div
+          x-show="open"
+          class="fixed inset-0 z-40 flex lg:hidden"
+          x-description="Off-canvas menu for mobile, show/hide based on off-canvas menu state."
+          x-ref="dialog"
+          aria-modal="true"
+          style="display: none"
+        >
+          <div
+            x-show="open"
+            x-transition:enter="transition-opacity ease-linear duration-300"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            x-transition:leave="transition-opacity ease-linear duration-300"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+            x-description="Off-canvas menu overlay, show/hide based on off-canvas menu state."
+            class="fixed inset-0 bg-gray-600 bg-opacity-75"
+            @click="open = false"
+            aria-hidden="true"
+            style="display: none"
+          ></div>
+
+          <div
+            x-show="open"
+            x-transition:enter="transition ease-in-out duration-300 transform"
+            x-transition:enter-start="-translate-x-full"
+            x-transition:enter-end="translate-x-0"
+            x-transition:leave="transition ease-in-out duration-300 transform"
+            x-transition:leave-start="translate-x-0"
+            x-transition:leave-end="-translate-x-full"
+            x-description="Off-canvas menu, show/hide based on off-canvas menu state."
+            class="relative flex flex-col flex-1 w-full max-w-xs bg-white dark:bg-pearl"
+            style="display: none"
+          >
+            <div
+              x-show="open"
+              x-transition:enter="ease-in-out duration-300"
+              x-transition:enter-start="opacity-0"
+              x-transition:enter-end="opacity-100"
+              x-transition:leave="ease-in-out duration-300"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0"
+              x-description="Close button, show/hide based on off-canvas menu state."
+              class="absolute top-0 right-0 pt-2 -mr-12"
+              style="display: none"
+            >
+              <button
+                type="button"
+                class="flex items-center justify-center w-10 h-10 ml-1 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                @click="open = false"
+              >
+                <span class="sr-only">Close sidebar</span>
+                <svg
+                  class="w-6 h-6 text-white"
+                  x-description="Heroicon name: outline/x"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+
+            <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+              <div class="flex items-center flex-shrink-0 px-4 text-comet dark:text-white">
+                <a href="./index.html"
+                  ><span class="inline-flex items-center font-bold tracking-tighter">
+                    <svg class="w-8 h-8" viewBox="0 0 147 148" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+                      <title>Group</title>
+                      <desc>Created with Sketch.</desc>
+                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Group">
+                          <path
+                            d="M73,74 L147,74 L147,148 L93,148 C81.954305,148 73,139.045695 73,128 L73,74 Z"
+                            fill="#d5ddfe"
+                            transform="translate(110.000000, 111.000000) rotate(-90.000000) translate(-110.000000, -111.000000) "
+                          />
+
+                          <path
+                            d="M0,0 L74,0 L74,74 L20,74 C8.954305,74 1.3527075e-15,65.045695 0,54 L0,0 Z"
+                            fill="#445cff"
+                            transform="translate(37.000000, 37.000000) scale(-1, -1) rotate(-90.000000) translate(-37.000000, -37.000000) "
+                          />
+                        </g>
+                      </g>
+                    </svg>
+
+                    <span class="ml-4 lg:text-2xl">Dockerz</span>
+                  </span></a
+                >
+              </div>
+              <nav class="px-2 mt-5 space-y-1">
+                <div class="dark:border-tuna border-l">
+                  <div>
+                    <a
+                      href="./index.html"
+                      class="hover:bg-icy border-periblue dark:bg-tuna text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light bg-white border-l-2"
+                    >
+                      Quickstart
+                    </a>
+                    <div x-data="{ open: false }">
+                      <button
+                        class="dark:hover:bg-tuna hover:bg-white focus:border-periblue inline-flex items-center w-full pr-4 border-l-2 border-transparent"
+                        @click="open = ! open"
+                      >
+                        <span
+                          class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group inline-flex items-center p-2 pl-6 text-base font-light"
+                        >
+                          Designing
+                        </span>
+                        <svg
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          :class="{'rotate-180': open, 'rotate-0': !open}"
+                          class="text-oyster dark:text-manatee dark:hover:text-periblue inline w-5 h-5 ml-auto transition-transform duration-200 transform"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+
+                      <div class="dark:border-tuna -px-px p-2 pl-6 border-l" x-show="open" @click.outside="open = false">
+                        <ul>
+                          <li>
+                            <a
+                              href="./starter.html"
+                              class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+                            >
+                              Get Started
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="./design-kit.html"
+                              class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+                            >
+                              Design Kits
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="./design-resources.html"
+                              class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+                            >
+                              Resources
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="./tutorials.html"
+                              class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+                            >
+                              Tutorials
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div x-data="{ open: false }">
+                      <button
+                        class="dark:hover:bg-tuna hover:bg-white focus:border-periblue inline-flex items-center w-full pr-4 border-l-2 border-transparent"
+                        @click="open = ! open"
+                      >
+                        <span
+                          class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group inline-flex items-center p-2 pl-6 text-base font-light"
+                        >
+                          Developing
+                        </span>
+                        <svg
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          :class="{'rotate-180': open, 'rotate-0': !open}"
+                          class="text-oyster dark:text-manatee dark:hover:text-periblue inline w-5 h-5 ml-auto transition-transform duration-200 transform"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+
+                      <div class="dark:border-tuna -px-px p-2 pl-6 border-l" x-show="open" @click.outside="open = false">
+                        <ul>
+                          <li>
+                            <a
+                              href="./starter.html"
+                              class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+                            >
+                              Get started
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="./frameworks.html"
+                              class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+                            >
+                              Frameworks
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="./developer-resources.html"
+                              class="text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group dark:hover:bg-tuna hover:bg-white focus:border-periblue flex items-center p-2 pl-3 text-base font-light border-l-2 border-transparent"
+                            >
+                              Resources
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <a
+                      href="./recomendations.html"
+                      class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light"
+                    >
+                      Recommendations
+                    </a>
+                  </div>
+                  <div class="pl-6 mt-12">
+                    <p class="text-comet dark:text-manatee text-sm font-semibold uppercase">Development</p>
+                  </div>
+                  <div class="mt-3">
+                    <a
+                      href="./components.html"
+                      class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light border-l border-transparent"
+                    >
+                      Components
+                    </a>
+
+                    <a
+                      href="./style-guide.html"
+                      class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light border-l border-transparent"
+                    >
+                      Style Guide
+                    </a>
+                    <a
+                      href="#"
+                      class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light border-l border-transparent"
+                    >
+                      License
+                    </a>
+                    <a
+                      href="https://github.com/WickedLabs/dockerz"
+                      class="dark:hover:bg-tuna hover:bg-white text-oyster dark:text-manatee dark:hover:text-periblue hover:text-river group flex items-center p-2 pl-6 text-base font-light border-l border-transparent"
+                    >
+                      Github Hub Repo
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div class="flex flex-shrink-0 p-4 pl-12 border-t border-smoke dark:border-tuna">
+              <!------ CTA buttons goes here-->
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-14">
+            <!-- Force sidebar to shrink to fit close icon -->
+          </div>
+        </div>
+        <div class="sticky top-0 z-10 pt-1 pl-1 bg-gray-100 dark:bg-pearl lg:hidden sm:pl-3 sm:pt-3">
+          <button
+            type="button"
+            class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            @click="open = true"
+          >
+            <span class="sr-only">Open sidebar</span>
+            <svg
+              class="w-6 h-6"
+              x-description="Heroicon name: outline/menu"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Start main area-->
+        <div class="flex-1 mx-auto">
+          <section class="dark:bg-tuna border-periblue max-w-7xl dark:border-gun mx-auto bg-white border-b">
+            <div class="max-w-7xl sm:px-6 md:px-32 pt-44 px-4 mx-auto">
+              <h1 data-animate="title" class="text-comet dark:text-manatee lg:text-5xl py-10 mx-auto text-4xl font-light leading-none tracking-tighter">
+                Components
+              </h1>
+            </div>
+          </section>
+          <section class="dark:bg-tuna pt-6 pb-24 bg-white">
+            <div class="sm:px-6 md:px-32 px-4 mx-auto">
+              <!-- Replace with your content -->
+              <section>
+                <div class="max-w-3xl">
+                  <div class="mx-auto space-y-24 text-lg text-left">
+                    <div class="space-y-8">
+                      <p class="text-waterloo dark:text-santa sm:text-lg md:mt-5 md:text-xl text-base font-light">
+                        Thos are al the components available on Dockerz
+                      </p>
+                      <div>
+                        <ul role="list" a class="sm:text-lg md:mt-5 md:text-xl space-y-3 text-base list-none">
+                          <li>
+                            <a class="text-waterloo dark:text-santa hover:text-oyster dark:hover:text-oyster font-light" href="#buttons"> &#8627; Buttons </a>
+                          </li>
+                          <li>
+                            <a class="text-waterloo dark:text-santa hover:text-oyster dark:hover:text-oyster font-light" href="#inputs"> &#8627; Inputs </a>
+                          </li>
+                          <li>
+                            <a class="text-waterloo dark:text-santa hover:text-oyster dark:hover:text-oyster font-light" href="#checkboxes">
+                              &#8627; Checkboxes
+                            </a>
+                          </li>
+                          <li>
+                            <a class="text-waterloo dark:text-santa hover:text-oyster dark:hover:text-oyster font-light" href="#breadcrumbs">
+                              &#8627; Breadcrumbs
+                            </a>
+                          </li>
+                          <li>
+                            <a class="text-waterloo dark:text-santa hover:text-oyster dark:hover:text-oyster font-light" href="#alerts"> &#8627; Alerts </a>
+                          </li>
+                          <li>
+                            <a class="text-waterloo dark:text-santa hover:text-oyster dark:hover:text-oyster font-light" href="#accordeons">
+                              &#8627; Accordeons
+                            </a>
+                          </li>
+                          <li>
+                            <a class="text-waterloo dark:text-santa hover:text-oyster dark:hover:text-oyster font-light" href="#tabs"> &#8627; Tabs </a>
+                          </li>
+                          <li>
+                            <a class="text-waterloo dark:text-santa hover:text-oyster dark:hover:text-oyster font-light" href="#code"> &#8627; Code </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="space-y-12" id="overview">
+                      <h2 class="text-comet dark:text-manatee hover:text-oyster lg:text-2xl group text-lg font-normal">
+                        <a href="" class="text-comet dark:text-manatee dark:hover:text-periblue inline-flex items-center gap-4">
+                          Overview
+                          <svg class="group-hover:block hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path
+                              fill="currentColor"
+                              d="M17.657 14.828l-1.414-1.414L17.657 12A4 4 0 1 0 12 6.343l-1.414 1.414-1.414-1.414 1.414-1.414a6 6 0 0 1 8.485 8.485l-1.414 1.414zm-2.829 2.829l-1.414 1.414a6 6 0 1 1-8.485-8.485l1.414-1.414 1.414 1.414L6.343 12A4 4 0 1 0 12 17.657l1.414-1.414 1.414 1.414zm0-9.9l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z"
+                            />
+                          </svg>
+                        </a>
+                      </h2>
+                      <main class="flex-auto" id="buttons">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">Buttons</h3>
+                          </div>
+                          <div class="flex-grow mt-6">
+                            <div class="flex flex-wrap gap-2">
+                              <div>
+                                <a
+                                  href="#"
+                                  class="border-ultramarine hover:border-ultramarine bg-ultramarine hover:shadow-none hover:bg-oyster focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ultramarine items-center block px-10 py-2 font-normal text-center text-white transition duration-500 ease-in-out transform border rounded-md"
+                                >
+                                  Primary
+                                </a>
+                              </div>
+
+                              <div>
+                                <a
+                                  href="#"
+                                  class="text-ultramarine text-blue hover:border-ultramarine focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ultramarine hover:shadow-none items-center block px-10 py-2 text-base font-normal text-center transition duration-500 ease-in-out transform bg-white border-2 rounded-md"
+                                >
+                                  Secondary
+                                </a>
+                              </div>
+                              <div>
+                                <a
+                                  href="#"
+                                  class="border-gun bg-gun hover:shadow-none hover:bg-river focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-river hover:border-river items-center block px-10 py-2 font-normal text-center text-white transition duration-500 ease-in-out transform border-2 rounded-md"
+                                >
+                                  Tertiary
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+
+                      <main class="flex-auto">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">Buttons with icons</h3>
+                          </div>
+                          <div class="flex-grow mt-6">
+                            <div class="flex flex-wrap gap-2">
+                              <div>
+                                <a
+                                  href="#"
+                                  class="border-ultramarine hover:border-ultramarine bg-ultramarine hover:shadow-none hover:bg-oyster focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ultramarine inline-flex items-center px-10 py-2 font-normal text-center text-white transition duration-500 ease-in-out transform border-2 rounded-md"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-heart w-6 h-6 mr-4"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                                    />
+                                  </svg>
+                                  Primary
+                                </a>
+                              </div>
+                              <div>
+                                <a
+                                  href="#"
+                                  class="text-ultramarine text-blue hover:border-ultramarine focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ultramarine hover:shadow-none inline-flex items-center px-10 py-2 font-normal text-center transition duration-500 ease-in-out transform bg-white border-2 rounded-md"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-heart w-6 h-6 mr-4"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                                    />
+                                  </svg>
+                                  Secondary
+                                </a>
+                              </div>
+                              <div>
+                                <a
+                                  href="#"
+                                  class="border-gun bg-gun hover:shadow-none hover:bg-riv border-guner focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-river hover:border-river inline-flex items-center px-10 py-2 font-normal text-center text-white transition duration-500 ease-in-out transform border-2 rounded-md"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-heart w-6 h-6 mr-4"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                                    />
+                                  </svg>
+                                  Tertiary
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+                      <main class="flex-auto">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">Buttons with Dropdown</h3>
+                          </div>
+                          <div class="flex-grow mt-6">
+                            <div class="flex flex-wrap gap-2">
+                              <div>
+                                <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                                  <button
+                                    @click="open = !open"
+                                    class="border-ultramarine hover:border-ultramarine bg-ultramarine hover:shadow-none hover:bg-oyster focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ultramarine inline-flex items-center px-10 py-2 font-normal text-center text-white transition duration-500 ease-in-out transform border rounded-md"
+                                  >
+                                    <span>Dropdown</span>
+                                    <svg
+                                      fill="currentColor"
+                                      viewBox="0 0 20 20"
+                                      :class="{'rotate-180': open, 'rotate-0': !open}"
+                                      class="inline w-5 h-5 ml-4 transition-transform duration-200 transform"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"
+                                      ></path>
+                                    </svg>
+                                  </button>
+                                  <div
+                                    x-show="open"
+                                    x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="transform opacity-0 scale-95"
+                                    x-transition:enter-end="transform opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-75"
+                                    x-transition:leave-start="transform opacity-100 scale-100"
+                                    x-transition:leave-end="transform opacity-0 scale-95"
+                                    class="md:w-full absolute z-50 w-full mx-auto mt-2 origin-top-right shadow-lg"
+                                  >
+                                    <div class="px-2 py-2 bg-white shadow">
+                                      <a
+                                        class="text-club md:mt-0 hover:text-ultramarine focus:text-gray-900 hover:bg-ghost focus:outline-none focus:shadow-outline block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg"
+                                        href="#"
+                                        >About</a
+                                      >
+                                      <a
+                                        class="text-club md:mt-0 hover:text-ultramarine focus:text-gray-900 hover:bg-ghost focus:outline-none focus:shadow-outline block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg"
+                                        href="#"
+                                        >Contact</a
+                                      >
+                                      <a
+                                        class="text-club md:mt-0 hover:text-ultramarine focus:text-gray-900 hover:bg-ghost focus:outline-none focus:shadow-outline block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg"
+                                        href="#"
+                                        >Support</a
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                                  <button
+                                    @click="open = !open"
+                                    class="border-ultramarine hover:border-ultramarine bg-ultramarine hover:shadow-none hover:bg-oyster focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ultramarine inline-flex items-center px-10 py-2 font-normal text-center text-white transition duration-500 ease-in-out transform border rounded-md"
+                                  >
+                                    <span>Dropup</span>
+
+                                    <svg
+                                      :class="{'rotate-180': open, 'rotate-0': !open}"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="inline w-5 h-5 ml-4 transition-transform duration-200 transform"
+                                      viewBox="0 0 20 20"
+                                      fill="currentColor"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                                        clip-rule="evenodd"
+                                      />
+                                    </svg>
+                                  </button>
+
+                                  <div
+                                    x-show="open"
+                                    x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="transform opacity-0 scale-95"
+                                    x-transition:enter-end="transform opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-75"
+                                    x-transition:leave-start="transform opacity-100 scale-100"
+                                    x-transition:leave-end="transform opacity-0 scale-95"
+                                    class="md:w-full absolute bottom-0 z-50 w-full mx-auto mt-2 origin-bottom-right shadow-lg"
+                                  >
+                                    <div class="px-2 py-2 bg-white shadow">
+                                      <a
+                                        class="text-club md:mt-0 hover:text-ultramarine focus:text-gray-900 hover:bg-ghost focus:outline-none focus:shadow-outline block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg"
+                                        href="#"
+                                        >About</a
+                                      >
+                                      <a
+                                        class="text-club md:mt-0 hover:text-ultramarine focus:text-gray-900 hover:bg-ghost focus:outline-none focus:shadow-outline block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg"
+                                        href="#"
+                                        >Contact</a
+                                      >
+                                      <a
+                                        class="text-club md:mt-0 hover:text-ultramarine focus:text-gray-900 hover:bg-ghost focus:outline-none focus:shadow-outline block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg"
+                                        href="#"
+                                        >Support</a
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+                      <main class="flex-auto">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">Buttons only icons</h3>
+                          </div>
+                          <div class="flex-grow mt-6">
+                            <div class="flex flex-wrap gap-2">
+                              <div>
+                                <a
+                                  href="#"
+                                  class="border-ultramarine hover:border-ultramarine bg-ultramarine hover:shadow-none hover:bg-oyster focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ultramarine inline-flex items-center p-4 text-lg font-medium text-center text-white transition duration-500 ease-in-out transform border rounded-md rounded-full"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-heart w-6 h-6"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                              <div>
+                                <a
+                                  href="#"
+                                  class="text-ultramarine text-blue hover:border-ultramarine focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ultramarine hover:shadow-none inline-flex items-center p-4 text-lg font-medium text-center transition duration-500 ease-in-out transform bg-white border-2 rounded-md rounded-full"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-heart w-6 h-6"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+
+                              <div>
+                                <a
+                                  href="#"
+                                  class="border-gun bg-gun hover:shadow-none hover:bg-riv border-guner focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-river hover:border-river inline-flex items-center p-4 text-lg font-medium text-center text-white transition duration-500 ease-in-out transform border-2 rounded-md rounded-full"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-heart w-6 h-6"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+                      <!----->
+                      <main class="flex-auto" id="inputs">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">Inputs</h3>
+                          </div>
+                          <div class="flex-grow mt-6">
+                            <div class="flex flex-wrap gap-2">
+                              <div>
+                                <div
+                                  class="dark:border-white focus-within:ring-1 focus-within:ring-oyster focus-within:border-oyster relative px-3 py-2 border-2 rounded-lg"
+                                >
+                                  <label
+                                    for="name"
+                                    class="text-club -top-2 left-2 dark:bg-tuna dark:text-white absolute inline-block px-1 -mt-px text-xs font-medium bg-white"
+                                    >Regular</label
+                                  >
+                                  <input
+                                    type="email"
+                                    name="emal"
+                                    id="name"
+                                    class="placeholder-cat focus:ring-0 sm:text-sm block w-full py-1 text-white bg-transparent border-0"
+                                    placeholder="regular"
+                                  />
+                                </div>
+                              </div>
+
+                              <div>
+                                <div
+                                  class="border-jade focus-within:ring-1 focus-within:ring-shamrock focus-within:border-shamrock relative px-3 py-2 border-2 rounded-lg"
+                                >
+                                  <label
+                                    for="name"
+                                    class="text-jade -top-2 left-2 dark:bg-tuna dark:text-white absolute inline-block px-1 -mt-px text-xs font-medium bg-white"
+                                    >Success</label
+                                  >
+                                  <input
+                                    type="email"
+                                    name="emal"
+                                    id="name"
+                                    class="placeholder-cat focus:ring-0 sm:text-sm block w-full py-1 text-white bg-transparent border-0"
+                                    placeholder="success"
+                                  />
+                                  <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-shamrock w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <div
+                                  class="border-carnation focus-within:ring-1 focus-within:ring-coral focus-within:border-coral relative px-3 py-2 border-2 rounded-lg"
+                                >
+                                  <label
+                                    for="name"
+                                    class="text-coral -top-2 left-2 dark:bg-tuna dark:text-white absolute inline-block px-1 -mt-px text-xs font-medium bg-white"
+                                    >Danger</label
+                                  >
+                                  <input
+                                    type="email"
+                                    name="emal"
+                                    id="name"
+                                    class="placeholder-cat focus:ring-0 sm:text-sm block w-full py-1 text-white bg-transparent border-0"
+                                    placeholder="default"
+                                  />
+                                  <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                    <svg
+                                      class="text-carnation w-5 h-5"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      viewBox="0 0 20 20"
+                                      fill="currentColor"
+                                      aria-hidden="true"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                        clip-rule="evenodd"
+                                      />
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+
+                      <main class="flex-auto">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">Text Area</h3>
+                          </div>
+                          <div class="flex-grow mt-6">
+                            <div class="flex flex-wrap gap-2">
+                              <div>
+                                <div
+                                  class="dark:border-white focus-within:ring-1 focus-within:ring-oyster focus-within:border-oyster relative px-3 py-2 border-2 rounded-lg"
+                                >
+                                  <label
+                                    for="name"
+                                    class="text-club -top-2 left-2 dark:bg-tuna dark:text-white absolute inline-block px-1 -mt-px text-xs font-medium bg-white"
+                                    >Regular</label
+                                  >
+                                  <textarea
+                                    type="email"
+                                    name="emal"
+                                    id="name"
+                                    class="placeholder-smoke focus:ring-0 sm:text-sm block w-full py-1 text-white bg-transparent border-0"
+                                    placeholder="email@example.com"
+                                  >
+                                  </textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+                      <main class="flex-auto">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">File Upload</h3>
+                          </div>
+                          <div class="flex-grow mt-6">
+                            <div class="flex items-center">
+                              <label
+                                class="shadow-static text-oyster border-oyster hover:text-club hover:border-club dark:bg- dark:bg-tuna flex flex-col items-center w-64 px-4 py-6 tracking-wide uppercase bg-white border-2 border-dashed rounded-lg cursor-pointer"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                                  />
+                                </svg>
+                                <span class="mt-2 text-base leading-normal">Select a file</span>
+                                <input type="file" class="hidden" />
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+                      <main class="flex-auto">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">Tags</h3>
+                          </div>
+                          <div class="flex-grow mt-6">
+                            <div class="flex flex-wrap">
+                              <div>
+                                <div x-data="{tags: ['what', 'is', 'up'], newTag: '', inputName: 'foo' }">
+                                  <template x-for="tag in tags">
+                                    <input class="p-3" type="hidden" x-bind:name="inputName + '[]'" x-bind:value="tag" />
+                                  </template>
+
+                                  <div class="w-full max-w-xl mx-auto">
+                                    <div class="tags-input rounded-xl dark:border-gun dark:bg-tuna inline-flex items-center p-1 bg-white border-2">
+                                      <template x-for="tag in tags" :key="tag">
+                                        <span
+                                          class="tags-input-tag focus:outline-none bg-oyster inline-flex px-6 py-3 mr-1 text-xs text-white align-middle rounded-lg select-none"
+                                        >
+                                          <span x-text="tag"></span>
+                                          <button
+                                            type="button"
+                                            class="tags-input-remove last:ml-1 first:mr-1 text-white"
+                                            @click="tags = tags.filter(i => i !== tag)"
+                                          >
+                                            &times;
+                                          </button>
+                                        </span>
+                                      </template>
+
+                                      <input
+                                        class="ml-4 p-2 rounded-xl flex-1 py-1 max-w-[10rem] tags-input-text text-oyster"
+                                        placeholder="Add tag..."
+                                        @keydown.enter.prevent="if (newTag.trim() !== '') tags.push(newTag.trim()); newTag = ''"
+                                        x-model="newTag"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+                      <!----->
+                      <main class="flex-auto" id="checkboxes">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">Checkboxes</h3>
+                          </div>
+                          <div class="flex-grow mt-6">
+                            <div class="flex flex-wrap items-center gap-12">
+                              <div>
+                                <fieldset class="space-y-5">
+                                  <legend class="sr-only">Screen reader text</legend>
+                                  <div class="relative flex items-start">
+                                    <div class="flex items-center h-5">
+                                      <input
+                                        id="input"
+                                        aria-describedby="input-description"
+                                        name="input"
+                                        type="checkbox"
+                                        class="text-oyster border-oyster focus:ring-oyster w-4 h-4 rounded"
+                                      />
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                      <label for="input" class="text-comet dark:text-manatee">Unchecked</label>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                                <fieldset class="space-y-5">
+                                  <legend class="sr-only">Screen reader text</legend>
+                                  <div class="relative flex items-start">
+                                    <div class="flex items-center h-5">
+                                      <input
+                                        checked=""
+                                        id="input"
+                                        aria-describedby="input-description"
+                                        name="input"
+                                        type="checkbox"
+                                        class="text-oyster border-oyster focus:ring-oyster w-4 h-4 rounded"
+                                      />
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                      <label for="input" class="text-comet dark:text-manatee">Checked</label>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                                <fieldset class="space-y-5">
+                                  <legend class="sr-only">Screen reader text</legend>
+                                  <div class="relative flex items-start">
+                                    <div class="flex items-center h-5">
+                                      <input
+                                        disabled=""
+                                        id="input"
+                                        aria-describedby="input-description"
+                                        name="input"
+                                        type="checkbox"
+                                        class="text-oyster border-oyster focus:ring-oyster disabled:opacity-60 w-4 h-4 rounded"
+                                      />
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                      <label for="input" class="text-comet dark:text-manatee">Unchecked</label>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                                <fieldset class="space-y-5">
+                                  <legend class="sr-only">Screen reader text</legend>
+                                  <div class="relative flex items-start">
+                                    <div class="flex items-center h-5">
+                                      <input
+                                        disabled=""
+                                        checked=""
+                                        id="input"
+                                        aria-describedby="input-description"
+                                        name="input"
+                                        type="checkbox"
+                                        class="text-oyster border-oyster focus:ring-oyster disabled:opacity-60 w-4 h-4 rounded"
+                                      />
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                      <label for="input" class="text-comet dark:text-manatee">Checked</label>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+                              <div>
+                                <fieldset class="space-y-5">
+                                  <legend class="sr-only">Screen reader text</legend>
+                                  <div class="flex items-center text-sm">
+                                    <input
+                                      type="radio"
+                                      name="pricing-plan"
+                                      value="Startup"
+                                      class="border-oyster text-oyster focus:ring-oyster w-4 h-4"
+                                      aria-labelledby="pricing-plans-0-label"
+                                      aria-describedby="pricing-plans-0-description-0 pricing-plans-0-description-1"
+                                    />
+
+                                    <span id="pricing-plans-0-label" class="text-comet dark:text-manatee ml-3">Checked</span>
+                                  </div>
+                                </fieldset>
+                                <fieldset class="space-y-5">
+                                  <legend class="sr-only">Screen reader text</legend>
+                                  <div class="flex items-center text-sm">
+                                    <input
+                                      checked=""
+                                      type="radio"
+                                      name="pricing-plan"
+                                      value="Startup"
+                                      class="border-oyster text-oyster focus:ring-oyster w-4 h-4"
+                                      aria-labelledby="pricing-plans-0-label"
+                                      aria-describedby="pricing-plans-0-description-0 pricing-plans-0-description-1"
+                                    />
+
+                                    <span id="pricing-plans-0-label" class="text-comet dark:text-manatee ml-3">Checked</span>
+                                  </div>
+                                </fieldset>
+                                <fieldset class="space-y-5">
+                                  <legend class="sr-only">Screen reader text</legend>
+                                  <div class="flex items-center text-sm">
+                                    <input
+                                      disabled=""
+                                      type="radio"
+                                      name="pricing-plan"
+                                      value="Startup"
+                                      class="border-oyster text-oyster focus:ring-oyster disabled:opacity-60 w-4 h-4"
+                                      aria-labelledby="pricing-plans-0-label"
+                                      aria-describedby="pricing-plans-0-description-0 pricing-plans-0-description-1"
+                                    />
+
+                                    <span id="pricing-plans-0-label" class="text-comet dark:text-manatee ml-3">Checked</span>
+                                  </div>
+                                </fieldset>
+                                <fieldset class="space-y-5">
+                                  <legend class="sr-only">Screen reader text</legend>
+                                  <div class="flex items-center text-sm">
+                                    <input
+                                      disabled=""
+                                      checked=""
+                                      type="radio"
+                                      name="pricing-plan"
+                                      value="Startup"
+                                      class="border-oyster text-oyster focus:ring-oyster disabled:opacity-60 w-4 h-4"
+                                      aria-labelledby="pricing-plans-0-label"
+                                      aria-describedby="pricing-plans-0-description-0 pricing-plans-0-description-1"
+                                    />
+
+                                    <span id="pricing-plans-0-label" class="text-comet dark:text-manatee ml-3">Checked</span>
+                                  </div>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+                      <main class="flex-auto">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet dark:text-manatee text-2xl font-normal leading-6">Toggle</h3>
+                          </div>
+                          <div class="flex-grow mt-6">
+                            <div>
+                              <label for="unchecked" class="inline-flex items-center mt-3 cursor-pointer">
+                                <span class="relative">
+                                  <span class="dark:bg-cinder block w-10 h-6 bg-white rounded-full shadow-inner"></span>
+                                  <span
+                                    class="focus-within:shadow-outline dark:bg-santa absolute inset-y-0 left-0 block w-4 h-4 mt-1 ml-1 transition-transform duration-300 ease-in-out bg-white rounded-full shadow"
+                                  >
+                                    <input id="unchecked" type="checkbox" class="absolute w-0 h-0 opacity-0" />
+                                  </span>
+                                </span>
+                                <span class="text-comet dark:text-manatee ml-3 text-sm">With label</span>
+                              </label>
+                            </div>
+
+                            <label for="checked" class="inline-flex items-center mt-3 cursor-pointer">
+                              <span class="relative">
+                                <span class="dark:bg-cinder block w-10 h-6 bg-white rounded-full shadow-inner"></span>
+                                <span
+                                  class="bg-oyster focus-within:shadow-outline absolute inset-y-0 left-0 block w-4 h-4 mt-1 ml-1 transition-transform duration-300 ease-in-out transform translate-x-full rounded-full shadow"
+                                >
+                                  <input id="checked" type="checkbox" class="absolute w-0 h-0 opacity-0" />
+                                </span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </main>
+                      <!----->
+                      <main class="flex-auto" id="breadcrumbs">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">Breadcrumbs</h3>
+                          </div>
+                          <div class="flex-grow mt-6 space-y-6">
+                            <nav class="flex" aria-label="Breadcrumb">
+                              <ol role="list" class="flex items-center space-x-4">
+                                <li>
+                                  <div>
+                                    <a href="#" class="text-comet dark:text-manatee hover:text-oyster">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-grid-dots"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <circle cx="5" cy="5" r="1" />
+                                        <circle cx="12" cy="5" r="1" />
+                                        <circle cx="19" cy="5" r="1" />
+                                        <circle cx="5" cy="12" r="1" />
+                                        <circle cx="12" cy="12" r="1" />
+                                        <circle cx="19" cy="12" r="1" />
+                                        <circle cx="5" cy="19" r="1" />
+                                        <circle cx="12" cy="19" r="1" />
+                                        <circle cx="19" cy="19" r="1" />
+                                      </svg>
+                                      <span class="sr-only">Home</span>
+                                    </a>
+                                  </div>
+                                </li>
+
+                                <li>
+                                  <div class="flex items-center">
+                                    <svg
+                                      class="text-comet dark:text-manatee flex-shrink-0 w-5 h-5"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="currentColor"
+                                      viewBox="0 0 20 20"
+                                      aria-hidden="true"
+                                    >
+                                      <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
+                                    </svg>
+                                    <a href="" class="text-comet dark:text-manatee hover:text-oyster dark:hover:text-oyster ml-4 text-sm font-medium">Center</a>
+                                  </div>
+                                </li>
+
+                                <li>
+                                  <div class="flex items-center">
+                                    <svg
+                                      class="text-comet dark:text-manatee flex-shrink-0 w-5 h-5"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="currentColor"
+                                      viewBox="0 0 20 20"
+                                      aria-hidden="true"
+                                    >
+                                      <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
+                                    </svg>
+                                    <a href="#" class="hover:text-oyster ml-4 text-sm font-medium text-gray-500" aria-current="page">Help center</a>
+                                  </div>
+                                </li>
+                              </ol>
+                            </nav>
+                            <nav class="flex" aria-label="Breadcrumb">
+                              <ol role="list" class="rounded-xl shadow-static border-oyster dark:bg-tuna flex px-6 space-x-4 bg-white border">
+                                <li class="flex">
+                                  <div class="flex items-center">
+                                    <a href="#" class="text-comet dark:text-manatee hover:text-oyster">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-grid-dots"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <circle cx="5" cy="5" r="1" />
+                                        <circle cx="12" cy="5" r="1" />
+                                        <circle cx="19" cy="5" r="1" />
+                                        <circle cx="5" cy="12" r="1" />
+                                        <circle cx="12" cy="12" r="1" />
+                                        <circle cx="19" cy="12" r="1" />
+                                        <circle cx="5" cy="19" r="1" />
+                                        <circle cx="12" cy="19" r="1" />
+                                        <circle cx="19" cy="19" r="1" />
+                                      </svg>
+
+                                      <span class="sr-only">Home</span>
+                                    </a>
+                                  </div>
+                                </li>
+
+                                <li class="flex">
+                                  <div class="flex items-center">
+                                    <svg
+                                      class="text-comet flex-shrink-0 w-6 h-full"
+                                      viewBox="0 0 24 44"
+                                      preserveAspectRatio="none"
+                                      fill="currentColor"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      aria-hidden="true"
+                                    >
+                                      <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+                                    </svg>
+                                    <a href="#" class="text-comet dark:text-manatee hover:text-oyster dark:hover:text-oyster ml-4 text-sm font-medium"
+                                      >Center</a
+                                    >
+                                  </div>
+                                </li>
+
+                                <li class="flex">
+                                  <div class="flex items-center">
+                                    <svg
+                                      class="text-comet flex-shrink-0 w-6 h-full"
+                                      viewBox="0 0 24 44"
+                                      preserveAspectRatio="none"
+                                      fill="currentColor"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      aria-hidden="true"
+                                    >
+                                      <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+                                    </svg>
+                                    <a
+                                      href="#"
+                                      class="text-comet dark:text-manatee hover:text-oyster dark:hover:text-oyster ml-4 text-sm font-medium"
+                                      aria-current="page"
+                                      >Help Center</a
+                                    >
+                                  </div>
+                                </li>
+                              </ol>
+                            </nav>
+                          </div>
+                        </div>
+                      </main>
+                      <!----->
+                      <main class="flex-auto" id="badges">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">Badges</h3>
+                          </div>
+                          <div class="flex-grow mt-6">
+                            <div class="flex flex-wrap items-center gap-6">
+                              <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-oyster border border-oyster text-white">
+                                Primary
+                              </span>
+                              <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-white border-smoke border dark:border-white text-oyster"
+                              >
+                                Secondary
+                              </span>
+                              <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-pearl border border-pearl text-white">
+                                Tertiary
+                              </span>
+                              <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-white border-smoke border dark:border-white text-jade"
+                              >
+                                Badge
+                              </span>
+                              <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-white border-smoke border dark:border-white text-pumpikin"
+                              >
+                                Badge
+                              </span>
+
+                              <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-white border-smoke border dark:border-white text-brink"
+                              >
+                                Badge
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+                      <!----->
+                      <main class="flex-auto" id="alerts">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-2xl font-normal leading-6 text-white">Alerts</h3>
+                          </div>
+                          <div class="flex-grow max-w-3xl mt-6">
+                            <div class="lg:grid lg:grid-cols-1 flex flex-col gap-12">
+                              <div class="space-y-4">
+                                <!----info-->
+                                <div class="rounded-xl border-smoke dark:bg-tuna dark:border-comet p-4 bg-white border">
+                                  <div class="flex">
+                                    <div class="flex-shrink-0">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-info-circle text-oyster"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <circle cx="12" cy="12" r="9"></circle>
+                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                        <polyline points="11 12 12 12 12 16 13 16"></polyline>
+                                      </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                      <h3 class="text-oyster text-base font-medium">Info</h3>
+                                      <div class="text-santa mt-2 text-sm">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!----warning-->
+                                <div class="rounded-xl border-smoke dark:bg-tuna dark:border-comet p-4 bg-white border">
+                                  <div class="flex">
+                                    <div class="flex-shrink-0">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler text-warning icon-tabler-alert-triangle text-pumpikin"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M12 9v2m0 4v.01"></path>
+                                        <path d="M5 19h14a2 2 0 0 0 1.84 -2.75l-7.1 -12.25a2 2 0 0 0 -3.5 0l-7.1 12.25a2 2 0 0 0 1.75 2.75"></path>
+                                      </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                      <h3 class="text-pumpikin text-base font-medium">Warning</h3>
+                                      <div class="text-santa mt-2 text-sm">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!----danger-->
+                                <div class="rounded-xl border-smoke dark:bg-tuna dark:border-comet p-4 bg-white border">
+                                  <div class="flex">
+                                    <div class="flex-shrink-0">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler text-psycho icon-tabler-alert-octagon text-brink"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path
+                                          d="M8.7 3h6.6c.3 0 .5 .1 .7 .3l4.7 4.7c.2 .2 .3 .4 .3 .7v6.6c0 .3 -.1 .5 -.3 .7l-4.7 4.7c-.2 .2 -.4 .3 -.7 .3h-6.6c-.3 0 -.5 -.1 -.7 -.3l-4.7 -4.7c-.2 -.2 -.3 -.4 -.3 -.7v-6.6c0 -.3 .1 -.5 .3 -.7l4.7 -4.7c.2 -.2 .4 -.3 .7 -.3z"
+                                        ></path>
+                                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                      </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                      <h3 class="text-brink text-base font-medium">Danger</h3>
+                                      <div class="text-santa mt-2 text-sm">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!----success-->
+                                <div class="rounded-xl border-smoke dark:bg-tuna dark:border-comet p-4 bg-white border">
+                                  <div class="flex">
+                                    <div class="flex-shrink-0">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler text-success icon-tabler-circle-check text-herbs"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <circle cx="12" cy="12" r="9"></circle>
+                                        <path d="M9 12l2 2l4 -4"></path>
+                                      </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                      <h3 class="text-herbs text-base font-medium">Success</h3>
+                                      <div class="text-santa mt-2 text-sm">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+                      <main class="flex-auto">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">Dismissable Alerts</h3>
+                          </div>
+                          <div class="flex-grow max-w-3xl mt-6">
+                            <div class="lg:grid lg:grid-cols-1 flex flex-col gap-12">
+                              <div class="space-y-4">
+                                <!----info-->
+                                <div x-data="{ open: true }">
+                                  <div
+                                    x-show="open"
+                                    @click.away="open = false"
+                                    class="rounded-xl border-smoke dark:bg-tuna dark:border-comet p-4 bg-white border"
+                                  >
+                                    <div class="flex items-start">
+                                      <div class="flex-shrink-0">
+                                        <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          class="icon icon-tabler icon-tabler-info-circle text-oyster"
+                                          width="20"
+                                          height="20"
+                                          viewBox="0 0 24 24"
+                                          stroke-width="2"
+                                          stroke="currentColor"
+                                          fill="none"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        >
+                                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                          <circle cx="12" cy="12" r="9"></circle>
+                                          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                          <polyline points="11 12 12 12 12 16 13 16"></polyline>
+                                        </svg>
+                                      </div>
+                                      <div class="ml-3">
+                                        <h3 class="text-oyster text-base font-medium">Info</h3>
+                                        <div class="text-santa mt-2 text-sm">
+                                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.</p>
+                                        </div>
+                                      </div>
+                                      <div class="pl-3 ml-auto">
+                                        <div class="-mx-1.5 -my-1.5">
+                                          <button
+                                            @click="open = false"
+                                            type="button"
+                                            class="inline-flex rounded-md p-1.5 text-oyster hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-white"
+                                          >
+                                            <span class="sr-only">Dismiss</span>
+                                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                              <path
+                                                fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"
+                                              ></path>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+                      <!----->
+                      <main class="flex-auto" id="accordeons">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">Accordeons</h3>
+                          </div>
+                          <div class="flex-grow max-w-3xl mt-6">
+                            <div class="lg:grid lg:grid-cols-1 flex flex-col gap-12">
+                              <div class="border-ghost dark:border-gun rounded-xl mx-auto overflow-hidden border-2" x-data="{selected:null}">
+                                <ul class="">
+                                  <li class="group dark:border-gun relative border-b-2" @click="open = !open">
+                                    <button
+                                      type="button"
+                                      class="focus:outline-none focus:border-outline focus:bg-ghost dark:text-comet bg-ghost dark:bg-tuna focus:text-white w-full text-left"
+                                      @click="selected !== 1 ? selected = 1 : selected = null"
+                                    >
+                                      <div class="text-club flex items-center justify-between p-4 text-base">
+                                        <span class="text-comet group-hover:text-oyster dark:text-manatee text-lg font-normal">
+                                          Do I need to know HTML and CSS?
+                                        </span>
+                                        <svg
+                                          fill="currentColor"
+                                          viewBox="0 0 20 20"
+                                          :class="{'rotate-180': open, 'rotate-0': !open}"
+                                          class="md:-mt-1 text-comet group-hover:text-oyster inline w-6 h-6 mt-1 ml-1 transition-transform duration-200 transform rotate-180"
+                                        >
+                                          <path
+                                            fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"
+                                          ></path>
+                                        </svg>
+                                      </div>
+                                    </button>
+                                    <div
+                                      class="max-h-0 relative overflow-hidden transition-all duration-700"
+                                      style=""
+                                      x-ref="container1"
+                                      x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                                    >
+                                      <div class="p-4">
+                                        <p class="text-comet dark:text-manatee text-lg font-light">
+                                          To make the template feel yours, you need to know the fundamentals of HTML and CSS. It is important to understand the
+                                          differences between these two, the syntax of each language, and some common terminology to be able to edit the
+                                          template. There are numerous resources on the internet that will assist you if you need help with HTML, CSS,
+                                          Javascript/jQuery, etc. Nevertheless, there are some specific online sources that will provide plenty of assistances.
+                                          Here is a small list: W3Schools Mozilla Developer Network (MDN) Web Docs Stack Overflow
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="dark:border-gun group relative border-b-2" @click="open = !open">
+                                    <button
+                                      type="button"
+                                      class="focus:outline-none focus:border-outline focus:bg-ghost dark:text-comet bg-ghost dark:bg-tuna focus:text-white w-full text-left"
+                                      @click="selected !== 2 ? selected = 2 : selected = null"
+                                    >
+                                      <div class="text-club flex items-center justify-between p-4 text-base">
+                                        <span class="text-comet group-hover:text-oyster dark:text-manatee text-lg font-normal">
+                                          Can I install the template on a CMS?
+                                        </span>
+                                        <svg
+                                          fill="currentColor"
+                                          viewBox="0 0 20 20"
+                                          :class="{'rotate-180': open, 'rotate-0': !open}"
+                                          class="md:-mt-1 text-comet group-hover:text-oyster inline w-6 h-6 mt-1 ml-1 transition-transform duration-200 transform rotate-180"
+                                        >
+                                          <path
+                                            fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"
+                                          ></path>
+                                        </svg>
+                                      </div>
+                                    </button>
+                                    <div
+                                      class="max-h-0 relative overflow-hidden transition-all duration-700"
+                                      style=""
+                                      x-ref="container2"
+                                      x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
+                                    >
+                                      <div class="p-4">
+                                        <p class="text-comet dark:text-manatee text-lg font-light">
+                                          The template cannot be installed on WordPress, Blogger, Joomla, Drupal, Ghost, or any other CMS. It is primarily
+                                          designed for use on the web as a standard website.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="dark:border-gun group relative" @click="open = !open">
+                                    <button
+                                      type="button"
+                                      class="focus:outline-none focus:border-outline focus:bg-ghost dark:text-comet bg-ghost dark:bg-tuna focus:text-white w-full text-left"
+                                      @click="selected !== 3 ? selected = 3 : selected = null"
+                                    >
+                                      <div class="text-club flex items-center justify-between p-4 text-base">
+                                        <span class="text-comet group-hover:text-oyster dark:text-manatee text-lg font-normal">
+                                          Will I receive future updates?
+                                        </span>
+                                        <svg
+                                          fill="currentColor"
+                                          viewBox="0 0 20 20"
+                                          :class="{'rotate-180': open, 'rotate-0': !open}"
+                                          class="md:-mt-1 text-comet group-hover:text-oyster inline w-6 h-6 mt-1 ml-1 transition-transform duration-200 transform rotate-180"
+                                        >
+                                          <path
+                                            fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"
+                                          ></path>
+                                        </svg>
+                                      </div>
+                                    </button>
+                                    <div
+                                      class="max-h-0 relative overflow-hidden transition-all duration-700"
+                                      style=""
+                                      x-ref="container3"
+                                      x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
+                                    >
+                                      <div class="p-4">
+                                        <p class="text-comet dark:text-manatee text-lg font-light">
+                                          We provide maintenance for our templates through updates when necessary. While we attempt to fix the for serious
+                                          issues, there may be cases where it is impractical or impossible to generate a fix due to compatibility issues or the
+                                          potential for introduction of unwanted side effects. Any updates will be delivered to you for download via Gumroad.
+                                          You are solely responsible for downloading, copying, and installing the updates. Please note that we do not guarantee
+                                          any updates for our free templates.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+                      <!----->
+                      <main class="flex-auto" id="tabs">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">Tabs</h3>
+                          </div>
+                          <div class="flex-grow max-w-2xl">
+                            <div class="lg:grid lg:grid-cols-1 flex flex-col gap-12">
+                              <div class="flex items-center justify-center h-full">
+                                <div x-data="tabData()" @tab-change="handleTabChange($event)" class="flex flex-col flex-1">
+                                  <header class="py-12">
+                                    <div>
+                                      <div class="dark:border-gun border-b">
+                                        <div class="mt-4" x-data="{ tab: 'bike' }">
+                                          <div class="flex w-full">
+                                            <button
+                                              :class="{ 'active  border-b-2 text-club border-oyster dark:border-white ': tab === 'bike' }"
+                                              class="text-comet focus:outline-none focus:bg-ghost hover:bg-alabaster hover:text-oyster focus:text-oyster dark:focus:bg-tuna dark:hover:bg-cinder dark:text-manatee p-3 border-b-2 border-transparent rounded-t-sm"
+                                              @click="tab = 'bike'"
+                                            >
+                                              Bike
+                                            </button>
+                                            <button
+                                              :class="{ 'active  border-b-2 text-club border-oyster dark:border-white': tab === 'car' }"
+                                              class="text-comet focus:outline-none focus:bg-ghost hover:bg-alabaster hover:text-oyster focus:text-oyster dark:focus:bg-tuna dark:hover:bg-cinder dark:text-manatee p-3 border-b-2 border-transparent rounded-t-sm"
+                                              @click="tab = 'car'"
+                                            >
+                                              Car
+                                            </button>
+                                          </div>
+
+                                          <div class="text-club py-3 rounded-b-sm">
+                                            <div x-show="tab === 'bike'">
+                                              <div class="space-y-8">
+                                                <div class="text-oyster flex items-center">
+                                                  <svg
+                                                    class="w-6 h-6"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    aria-hidiven="true"
+                                                  >
+                                                    <path
+                                                      stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      stroke-width="2"
+                                                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                                                    />
+                                                  </svg>
+                                                </div>
+
+                                                <p class="text-comet lg:text-3xl dark:text-smoke text-4xl font-light leading-snug">Save Time</p>
+                                              </div>
+                                              <div class="text-waterloo dark:text-santa sm:text-lg md:mt-5 md:text-xl mt-2 text-base font-light">
+                                                <span>
+                                                  Be any other - we are certain of that. Built from the ground up using the latest technologies, Shadow's
+                                                  platform is unlike any other - we are certain.
+                                                </span>
+                                              </div>
+                                            </div>
+                                            <div x-show="tab === 'car'">
+                                              <div class="space-y-8">
+                                                <div class="text-oyster flex items-center">
+                                                  <svg
+                                                    class="w-6 h-6"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    aria-hidiven="true"
+                                                  >
+                                                    <path
+                                                      stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      stroke-width="2"
+                                                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                                                    />
+                                                  </svg>
+                                                </div>
+
+                                                <p class="text-comet lg:text-3xl dark:text-smoke text-4xl font-bold leading-snug">Built with</p>
+                                              </div>
+                                              <div class="text-waterloo dark:text-santa sm:text-lg md:mt-5 md:text-xl mt-2 text-base font-light">
+                                                <span>
+                                                  Built from the ground up using the latest technologies, Shadow's platform is unlike any other - we are
+                                                  certain.
+                                                </span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </header>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+                      <!----->
+                      <main class="flex-auto" id="code">
+                        <div class="max-w-7xl mx-auto">
+                          <div class="dark:border-gun pb-6 border-b">
+                            <h3 class="text-comet text-2xl font-normal leading-6">Code</h3>
+                          </div>
+                          <div class="flex-grow max-w-3xl mt-6">
+                            <div class="lg:grid lg:grid-cols-1 flex flex-col">
+                              <script class="border" src="https://gist.github.com/michael-andreuzza/8c85d077803ea61899eee75a0118ea1c.js"></script>
+                            </div>
+                          </div>
+                        </div>
+                      </main>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+          <!-- This example requires Tailwind CSS v2.0+ -->
+          <div class="bg-lilac border-oyster dark:border-pearl dark:bg-cinder dark:hover:bg-gun border-t-2">
+            <div class="max-w-7xl mx-auto">
+              <div class="lg:grid-cols-2 lg:divide-x dark:divide-x-gun dark:divide-gun grid grid-cols-1">
+                <div>
+                  <a href="#">
+                    <div class="bg-ghost dark:bg-cinder dark:hover:bg-tuna hover:bg-metal sm:px-6 lg:px-8 group px-4 pt-8 pb-16">
+                      <span class="text-comet dark:text-manatee dark:hover:text-oyster text-sm font-normal"> Previous </span>
+                      <p
+                        class="lg:text-base text-comet dark:text-manatee sm:text-xl dark:group-hover:text-periblue darkgroup-hover:text-periblue group-hover:text-pearl text-xs font-light"
+                      >
+                        Home
+                      </p>
+                    </div>
+                  </a>
+                </div>
+
+                <div>
+                  <a href="#">
+                    <div class="md:mt-0 bg-ghost dark:bg-cinder dark:hover:bg-tuna hover:bg-metal sm:px-6 lg:px-8 group px-4 pt-8 pb-16">
+                      <span class="text-comet dark:text-manatee text-sm font-normal"> Next </span>
+                      <p
+                        class="lg:text-base text-comet dark:text-manatee sm:text-xl dark:group-hover:text-periblue darkgroup-hover:text-periblue group-hover:text-pearl space-x-2 text-xs font-light"
+                      >
+                        <span>Area:</span>
+                        <span>Subject</span>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-t border-antiflash bg-ghost dark:border-gun dark:bg-cinder">
+            <div class="mx-auto max-w-7xl">
+              <div class="grid grid-cols-2 mx-auto max-w-none">
+                <div class="px-4 py-8 bg-ghost dark:bg-cinder dark:border-tuna sm:px-6 lg:px-8">
+                  <div class="grid grid-cols-1 lg:grid-cols-3">
+                    <ul role="list" class="mt-4 space-y-4 lg:mt-0">
+                      <li>
+                        <a
+                          href="./index.html"
+                          class="text-xs font-light lg:text-base text-comet dark:text-santa sm:text-xl hover:text-oyster dark:hover:text-periblue"
+                        >
+                          Home
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="./features.html"
+                          class="text-xs font-light lg:text-base text-comet dark:text-santa sm:text-xl hover:text-oyster dark:hover:text-periblue"
+                        >
+                          Features
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="./about.html"
+                          class="text-xs font-light lg:text-base text-comet dark:text-santa sm:text-xl hover:text-oyster dark:hover:text-periblue"
+                        >
+                          About
+                        </a>
+                      </li>
+                    </ul>
+                    <ul role="list" class="mt-4 space-y-4 lg:mt-0">
+                      <li>
+                        <a
+                          href="./index.html"
+                          class="text-xs font-light lg:text-base text-comet dark:text-santa sm:text-xl hover:text-oyster dark:hover:text-periblue"
+                        >
+                          Home
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="./features.html"
+                          class="text-xs font-light lg:text-base text-comet dark:text-santa sm:text-xl hover:text-oyster dark:hover:text-periblue"
+                        >
+                          Features
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="./about.html"
+                          class="text-xs font-light lg:text-base text-comet dark:text-santa sm:text-xl hover:text-oyster dark:hover:text-periblue"
+                        >
+                          About
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="px-4 py-8 md:mt-0 bg-ghost dark:bg-cinder dark:border-tuna sm:px-6 lg:px-8" id="contact">
+                  <div class="mt-8 md:mt-0 md:order-1 lg:pr-12">
+                    <p class="text-xs font-light lg:text-base text-comet dark:text-santa sm:text-xl">Have questions? Email us at email@example.com</p>
+                    <p class="text-xs font-light lg:text-base text-comet dark:text-santa sm:text-xl">
+                      Dockerz ©
+
+                      <span x-text="new Date().getFullYear()"></span>
+                      <a href="https://apesoflondon.design/" class="text-oyster hover:text-white">Apes of London</a>
+                      All rights reserved.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="border-t border-antiflash bg-ghost dark:bg-cinder dark:border-gun" aria-labelledby="footer-heading">
+            <h2 id="footer-heading" class="sr-only">Footer</h2>
+            <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
+              <div class="justify-center text-center lg:text-left lg:justify-start">
+                <div class="space-y-8 text-comet dark:text-santa">
+                  <div>
+                    <span class="text-lg font-bold lg:text-2xl"
+                      ><span class="inline-flex items-center font-bold tracking-tighter">
+                        <svg class="w-8 h-8" viewBox="0 0 147 148" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+                          <title>Group</title>
+                          <desc>Created with Sketch.</desc>
+                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Group">
+                              <path
+                                d="M73,74 L147,74 L147,148 L93,148 C81.954305,148 73,139.045695 73,128 L73,74 Z"
+                                fill="#d5ddfe"
+                                transform="translate(110.000000, 111.000000) rotate(-90.000000) translate(-110.000000, -111.000000) "
+                              />
+
+                              <path
+                                d="M0,0 L74,0 L74,74 L20,74 C8.954305,74 1.3527075e-15,65.045695 0,54 L0,0 Z"
+                                fill="#445cff"
+                                transform="translate(37.000000, 37.000000) scale(-1, -1) rotate(-90.000000) translate(-37.000000, -37.000000) "
+                              />
+                            </g>
+                          </g>
+                        </svg>
+
+                        <span class="ml-4 lg:text-2xl">Dockerz</span>
+                      </span></span
+                    >
+                    <p class="mx-auto ml-12 text-sm lg:w-1/2 text-club">Wicked templates for wicked dev's</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+        <!-- End div area -->
+      </div>
+      <!-- You can insert a third column here, for a table of contents if you wish, is already built and it will be fixed and hidden on phone.-->
+
+      <!-- End secondary column -->
+    </div>
+  </div>
+</div>
