@@ -82,7 +82,7 @@ const collectDataList = async (jsonsheet, defaultStep) => {
     chunkdata = transResponse(response["data"]);
     result.push(...chunkdata);
 
-    handleProcessCnt(i, cnt);
+    handleProcessCnt(i+1, cnt+1);
   }
 
   return result;
