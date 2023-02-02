@@ -1,6 +1,5 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
-const url = require("url");
 const xlsx = require("xlsx");
 const axios = require("axios");
 
@@ -25,15 +24,15 @@ const transResponse = (aDataList) => {
   const result = aDataList.map((data) => {
     return {
       b_no: data["b_no"],
+      b_stt: data["b_stt"],
       tax_type: data["tax_type"],
       end_dt: data["end_dt"],
+      utcc_yn: data["utcc_yn"],
+      tax_type_change_dt: data["tax_type_change_dt"],
+      invoice_apply_dt: data["invoice_apply_dt"],
     };
   });
   return result;
-};
-
-const isEmpty = (target) => {
-  return target == null || target == undefined;
 };
 
 const callDataPortal = async (dataList) => {
@@ -104,9 +103,7 @@ const handleDataFile = (event, filePath) => {
 
   workbook.SheetNames.forEach(async (name) => {
     const jsonsheet = xlsx.utils.sheet_to_json(workbook.Sheets[name]);
-    const range = jsonsheet.length;
     const defaultStep = 100;
-    const cnt = Math.floor(range / defaultStep);
 
     // Call Data
     let datalist = await collectDataList(jsonsheet, defaultStep);
